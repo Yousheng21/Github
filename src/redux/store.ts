@@ -1,8 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
+import {MainSlice} from "./MainSlice";
 
 const store = configureStore({
-    reducer: {},
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+    reducer: {
+        main: MainSlice.reducer
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    }),
     devTools: true,
 });
 

@@ -1,14 +1,21 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+import {FormSearch} from "./components/FormSearch/FormSearch";
+import {Profile} from "./components/Profile/Profile";
+import {TableCommits} from "./components/TableCommits/TableCommits";
+import {withLayout} from "./layout/Layout";
+
 function App() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="" element={<span className="underline">App</span>} />
+            <Route path="" element={<FormSearch />} />
+            <Route path="/profile/:name" element={<Profile />} />
+            <Route path="/:login/commits/:repo" element={<TableCommits />} />
         </Routes>
     </BrowserRouter>
   );
 }
 
-export default App;
+export default withLayout(App);
