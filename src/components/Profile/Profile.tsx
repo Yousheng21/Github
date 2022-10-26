@@ -29,17 +29,17 @@ export const Profile = ():JSX.Element => {
     if (!profile?.data || !name || !repos) return <NotFound />
 
     return (
-        <section className="flex flex-col lg:flex-row gap-20">
+        <section className="flex flex-col justify-center lg:flex-row gap-20">
             <aside className="flex flex-col gap-3 items-center">
                 <div className="">
-                    <img className="max-w-profile rounded" src={profile.data.avatar_url} alt=""/>
+                    <img className="max-w-img rounded" src={profile.data.avatar_url} alt=""/>
                 </div>
                 <div className="flex flex-col gap-1">
                     <h1 className="border-b-2 border-stone-900">Логин: {profile.data.login}</h1>
                     {profile.data.location && (
                         <div className="flex items-center gap-6 justify-between">
                             <span>{profile.data.location}</span>
-                            <Location />
+                            <Location className="w-10" />
                         </div>
                     )}
                 </div>

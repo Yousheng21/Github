@@ -7,7 +7,7 @@ module.exports = {
         'right': "-10px -5px 15px rgba(0, 0, 0, .1) inset"
       },
       maxWidth: {
-        'profile':"150px"
+        'img':"150px"
       },
     },
   },
