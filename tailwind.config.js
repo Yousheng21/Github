@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'right': "-10px -5px 15px rgba(0, 0, 0, .1) inset"
+      },
+    },
   },
   plugins: [],
 }

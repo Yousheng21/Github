@@ -1,11 +1,12 @@
 import axios from "axios";
 
-const TOKEN = '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';
+const SERVER_ADDRESS = "https://api.github.com/";
+const API_TOKEN = "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";
 
 export const instance = axios.create({
     baseURL: "https://api.github.com/",
     method: "GET",
     headers: {
-        Authorization: `Bearer ${TOKEN}`
+        Authorization: `Bearer ${API_TOKEN}`
     },
 });

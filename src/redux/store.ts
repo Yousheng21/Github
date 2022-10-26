@@ -1,9 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {MainSlice} from "./MainSlice";
+import {ProfileSlice} from "./slice/ProfileSlice";
+import {RepoSlice} from "./slice/RepoSlice";
+import {CommitSlice} from "./slice/CommitSlice";
 
 const store = configureStore({
     reducer: {
-        main: MainSlice.reducer
+        profile: ProfileSlice.reducer,
+        repo: RepoSlice.reducer,
+        commit: CommitSlice.reducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false

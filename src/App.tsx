@@ -7,15 +7,13 @@ import {TableCommits} from "./components/TableCommits/TableCommits";
 import {withLayout} from "./layout/Layout";
 
 function App() {
-  return (
-    <BrowserRouter>
+    return (
         <Routes>
             <Route path="" element={<FormSearch />} />
             <Route path="/profile/:name" element={<Profile />} />
             <Route path="/:login/commits/:repo" element={<TableCommits />} />
         </Routes>
-    </BrowserRouter>
-  );
+    );
 }
 
 export default withLayout(App);
