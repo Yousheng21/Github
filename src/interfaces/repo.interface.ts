@@ -5,7 +5,7 @@ export interface IStateRepo {
     isLoadingRepos: boolean;
 }
 
-interface IRepo {
+export interface IRepo {
     id: string;
     name: string;
     language: string;

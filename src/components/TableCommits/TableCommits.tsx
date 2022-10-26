@@ -5,9 +5,10 @@ import {AppDispatch, RootState} from "../../redux/store";
 
 import {getCommits} from "../../redux/action/actionCommit";
 import {formattedDate} from "../../utils/utils";
+import {Loader} from "../Loader/Loader";
 import {ReactComponent as Arrow} from "../../icons/arrow_left.svg";
 
-export const TableCommits = () => {
+export const TableCommits = (): JSX.Element => {
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
     const {repo, login} = useParams();
@@ -20,7 +21,7 @@ export const TableCommits = () => {
         }
     }, [repo, login])
 
-    if (isLoadingCommits) return <span>Loading</span>;
+    if (isLoadingCommits) return <Loader />;
 
     return (
         <section className="flex flex-col gap-10">
@@ -50,7 +51,7 @@ export const TableCommits = () => {
                             }
                         </div>
                     </div>
-                ) : <span>Коммиты отсутствуют</span>
+                ) : <span className="flex justify-center">Коммиты отсутствуют</span>
             }
         </section>
     );

@@ -1,5 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {instance} from "../../components/api/apiData";
+import {instance} from "../../api/apiData";
 import {AxiosResponse} from "axios";
 import {IRepos} from "../../interfaces/repo.interface";
 
