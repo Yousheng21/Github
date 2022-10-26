@@ -9,6 +9,10 @@ module.exports = {
       maxWidth: {
         'img':"150px"
       },
+      minWidth: {
+        'table_commits': '935px',
+        'table_repos': '635px'
+      }
     },
   },
   plugins: [],

@@ -34,7 +34,7 @@ export const TableCommits = (): JSX.Element => {
             {
                 commits ? (
                     <div className="overflow-x-auto shadow-right lg:shadow-none mt-5">
-                        <div className="grid auto-rows-auto" style={{minWidth:"935px"}}>
+                        <div className="grid auto-rows-auto min-w-table_commits">
                             <div className="grid grid-cols-3 text-center gap-6 pb-7 border-double border-b-4 border-stone-500 mb-2 font-bold">
                                 <span>Автор</span>
                                 <span>Хэш коммита</span>
